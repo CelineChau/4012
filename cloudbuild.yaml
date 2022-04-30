@@ -23,17 +23,17 @@ steps:
   - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
 #step 4
-# - name: 'gcr.io/cloud-builders/kubectl'
-#   args: [
-#    'set', 
-#    'image', 
-#    'deployment', 
-#    'nginx-webapp', 
-#    'nginx-webapp=eu.gcr.io/$PROJECT_ID/nginx-webapp:$BRANCH_NAME-$COMMIT_SHA'
-#   ]
-#   env:
-#   - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-b'
-#   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: [
+   'set', 
+   'image', 
+   'deployment', 
+   'nginx-webapp', 
+   'nginx-webapp=eu.gcr.io/$PROJECT_ID/nginx-webapp:$BRANCH_NAME-$COMMIT_SHA'
+  ]
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=europe-west1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
 # push images to Google Container Registry with tags
 images: [
    'eu.gcr.io/$PROJECT_ID/nginx-webapp:$BRANCH_NAME-$COMMIT_SHA',
