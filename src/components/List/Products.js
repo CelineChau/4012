@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Product from '../Product/Product';
 
-const Products = ({search, size}) => {
-
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        axios.get('https://europe-west1-g-hack-devoteam-4012.cloudfunctions.net/getAliments')
-            .then((res) => setData(res.data));
-    }, [])
+const Products = ({search, data}) => {
 
     const dataFiltered = data.filter(oData => oData.Food_product.toLowerCase().includes(search));
-    size(dataFiltered.length);
 
     return (
         <div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
