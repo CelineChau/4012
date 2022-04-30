@@ -19,7 +19,7 @@ spec:
         app: nginx-webapp
     spec:
       containers:
-      - image: eu.gcr.io/g-hack-devoteam-4012/nginx-webapp:v1
+      - image: eu.gcr.io/g-hack-devoteam-4012/nginx-webapp:latest
         name: webapp
         imagePullPolicy: Always
         resources: {}
