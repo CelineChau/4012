@@ -101,7 +101,9 @@ const Home = () => {
             <Section index={iIndex} information={oCategory}></Section>
           ))
         : product && <div className="flex justify-center">Loading...</div>}
-        <Footer data={currProduct}></Footer>
+        {currProduct && (
+            <Footer data={currProduct}></Footer>
+        )}
     </div>
   );
 };
