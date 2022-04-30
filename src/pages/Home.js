@@ -5,7 +5,7 @@ import Section from '../components/Section/Section';
 import axios from 'axios';
 
 const Home = () => {
-    const [product, setProduct] = useState("Tomato");
+    const [product, setProduct] = useState("");
     const [nbProducts, setNbProducts] = useState(0);
 
     const [data, setData] = useState([]);
