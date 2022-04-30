@@ -3,7 +3,7 @@ function SearchBar({ setValue }) {
       <>
         <div className="flex justify-center">
           <div className="mt-10 mb-3 xl:w-96">
-            <h2 class="font-medium leading-tight text-2xl mt-0 mb-2 text-green-500 flex justify-center">Carbon Footprint of Food Products</h2>
+            <h2 className="font-medium leading-tight text-2xl mt-0 mb-2 text-green-500 flex justify-center">Carbon Footprint of Food Products</h2>
   
             <div className="input-group relative flex items-stretch w-full mb-4">
               <input
@@ -20,9 +20,9 @@ function SearchBar({ setValue }) {
                 className="btn flex px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-r shadow-md hover:bg-green-500 hover:shadow-lg focus:bg-green-500  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-lg transition duration-150 ease-in-out items-center"
                 type="button"
                 id="button-addon2"
-                onClick={() => {
-                    console.warn('product')
-                }}
+                // onClick={() => {
+                //     console.warn('product')
+                // }}
               >
                 <svg
                   aria-hidden="true"
