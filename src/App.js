@@ -1,19 +1,13 @@
 import './App.css';
-import { useEffect, useState } from "react";
+import Home from './pages/Home';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
-  const [product, setProduct] = useState("Tomato");
+  AOS.init();
   return (
-    <div className="container mx-auto">
-    <header className="App-header">
-        <p>
-          Farming route !
-        </p>
-      </header>
-      <SearchBar setValue={setProduct} />
-    </div>
+    <Home />
   );
 }
 
