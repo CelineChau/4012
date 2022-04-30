@@ -3,6 +3,7 @@ import Products from "../components/List/Products";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Section from "../components/Section/Section";
 import axios from "axios";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   const [product, setProduct] = useState("");
@@ -33,31 +34,31 @@ const Home = () => {
         setCategories([
           {
             category: "Land use change",
-            value: data.Land_use_change,
+            value: data.Land_use_change + ' Kg CO2',
           },
           {
             category: "Animal feed",
-            value: data.Animal_Feed,
+            value: data.Animal_Feed + ' Kg CO2',
           },
           {
             category: "Farm",
-            value: data.Farm,
+            value: data.Farm + ' Kg CO2',
           },
           {
             category: "Processing",
-            value: data.Processing,
+            value: data.Processing + ' Kg CO2',
           },
           {
             category: "Transport",
-            value: data.Transport,
+            value: data.Transport + ' Kg CO2',
           },
           {
             category: "Packaging",
-            value: data.Packging,
+            value: data.Packging + ' Kg CO2',
           },
           {
             category: "Retail",
-            value: data.Retail,
+            value: data.Retail + ' Kg CO2',
           },
         ]);
       });
@@ -100,6 +101,7 @@ const Home = () => {
             <Section index={iIndex} information={oCategory}></Section>
           ))
         : product && <div className="flex justify-center">Loading...</div>}
+        <Footer data={currProduct}></Footer>
     </div>
   );
 };
