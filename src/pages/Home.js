@@ -49,7 +49,7 @@ const Home = () => {
       <div className="container mx-auto">
           <div className="wrapper-list">
             <SearchBar setValue={setProduct} />
-            <Products data={data} search={product}></Products>
+            {product !== "" && <Products data={data} search={product}></Products>}
           </div>
         {
             nbProducts > 0 ? categories.map((oCategory, iIndex) => <Section index={iIndex} information={oCategory}></Section>) : null
