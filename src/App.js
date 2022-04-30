@@ -1,13 +1,13 @@
 import './App.css';
+import { useEffect, useState } from "react";
+
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
+  const [product, setProduct] = useState("Tomato");
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Farming route
-        </p>
-      </header>
+    <div className="container mx-auto">
+      <SearchBar setValue={setProduct} />
     </div>
   );
 }
