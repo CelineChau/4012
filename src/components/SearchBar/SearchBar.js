@@ -3,18 +3,13 @@ function SearchBar({ setValue }) {
       <>
         <div className="flex justify-center">
           <div className="mt-10 mb-3 xl:w-96">
-            <label
-              htmlFor="exampleSearch2"
-              className="form-label mb-2 text-gray-700 flex justify-center"
-            >
-              Search product
-            </label>
+            <h2 class="font-medium leading-tight text-2xl mt-0 mb-2 text-green-500 flex justify-center">Carbon Footprint of Food Products</h2>
   
             <div className="input-group relative flex items-stretch w-full mb-4">
               <input
                 type="search"
                 className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid rounded-l transition ease-in-out m-0 focus:text-gray-700 focus:bg-white border-green-500 focus:outline-none"
-                placeholder="Product"
+                placeholder="Search for food products"
                 aria-label="Product"
                 aria-describedby="button-addon2"
                 onChange={(e) => {
