@@ -40,8 +40,10 @@ const Home = () => {
 
     return (
       <div className="container mx-auto">
-        <SearchBar setValue={setProduct} />
-        <Products size={setNbProducts} search={product}></Products>
+          <div className="wrapper-list">
+            <SearchBar setValue={setProduct} />
+            <Products size={setNbProducts} search={product}></Products>
+          </div>
         {
             nbProducts > 0 ? categories.map((oCategory, iIndex) => <Section index={iIndex} information={oCategory}></Section>) : null
         }

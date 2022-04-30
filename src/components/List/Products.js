@@ -34,11 +34,13 @@ const Products = ({search, size}) => {
     size(dataFiltered.length);
 
     return (
-        <ul className='products list-disc'>
-           { 
-                dataFiltered.map((oInfo, index) => <Product key={index} info={oInfo}></Product>)
-           }
-        </ul>
+        <div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
+            <ul className='divide-y-2 divide-gray-100 products list-disc'>
+                { 
+                    dataFiltered.map((oInfo, index) => <Product key={index} info={oInfo}></Product>)
+                }
+            </ul>
+        </div>
     );
 };
 
