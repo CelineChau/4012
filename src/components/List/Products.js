@@ -4,33 +4,13 @@ import Product from '../Product/Product';
 
 const Products = ({search, size}) => {
 
-    const [dataTest, setDataTest] = useState([]);
+    const [data, setData] = useState([]);
     useEffect(() => {
         axios.get('https://europe-west1-g-hack-devoteam-4012.cloudfunctions.net/getAliments')
-            .then((res) => setDataTest(res.data));
+            .then((res) => setData(res.data));
     }, [])
 
-    const test = dataTest;
-
-    const [data, setData] = useState([
-        {
-            text: 'Riz'
-        },
-        {
-            text: 'Orange'
-        },
-        {
-            text: 'Banane'
-        },
-        {
-            text: 'Carotte'
-        },
-        {
-            text: 'Haricot'
-        }
-    ]);
-
-    const dataFiltered = data.filter(oData => oData.text.toLowerCase().includes(search));
+    const dataFiltered = data.filter(oData => oData.Food_product.toLowerCase().includes(search));
     size(dataFiltered.length);
 
     return (
